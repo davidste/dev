@@ -1,0 +1,200 @@
+
+:root {
+    --kc-primary: #3B82F6; /* blue-500 */
+    --kc-secondary: #F59E0B; /* amber-500 */
+    --kc-background: #0F0F0F;
+    --kc-surface: #1A1A1A; /* Darker surfaces */
+    --kc-surface-light: #252525; /* Lighter surfaces like cards */
+    --kc-card-background: #1F1F1F; /* Specific for cards if needed */
+    --kc-input-background: #2A2A2A;
+    --kc-text-primary: #FFFFFF;
+    --kc-text-secondary: #9CA3AF; /* gray-400 */
+    --kc-success: #10B981; /* emerald-500 */
+    --kc-error: #EF4444; /* red-500 */
+    --kc-warning: #F59E0B;
+    --kc-info: #3B82F6;
+    --kc-border: #374151; /* gray-700 */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--kc-background);
+    color: var(--kc-text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.admin-header {
+    background-color: var(--kc-surface);
+    color: var(--kc-primary);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--kc-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.admin-header nav a {
+    color: var(--kc-text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.admin-header nav a:hover {
+    color: var(--kc-primary);
+}
+
+
+.admin-main {
+    display: flex;
+    flex-grow: 1;
+}
+
+.admin-sidebar {
+    width: 240px;
+    background-color: var(--kc-surface);
+    padding: 1.5rem;
+    border-right: 1px solid var(--kc-border);
+}
+
+.admin-sidebar h2 {
+    color: var(--kc-primary);
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--kc-border);
+    padding-bottom: 0.5rem;
+}
+
+.admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-sidebar ul li a {
+    display: block;
+    color: var(--kc-text-secondary);
+    text-decoration: none;
+    padding: 0.6rem 0.2rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 0.95rem;
+}
+
+.admin-sidebar ul li a:hover,
+.admin-sidebar ul li a.active-link {
+    background-color: var(--kc-input-background);
+    color: var(--kc-primary);
+}
+
+.admin-content {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: var(--kc-background); /* Or slightly lighter if preferred */
+}
+
+.content-header {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--kc-border);
+    padding-bottom: 1rem;
+}
+.content-header h2 {
+    font-size: 1.8rem;
+    color: var(--kc-primary);
+    margin:0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background-color: var(--kc-card-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--kc-border);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: var(--kc-text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--kc-primary);
+    margin: 0 0 0.2rem 0;
+}
+.stat-card small {
+    font-size: 0.8rem;
+    color: var(--kc-text-secondary);
+    opacity: 0.8;
+}
+.stat-card .text-success { color: var(--kc-success); }
+
+
+.quick-actions {
+    background-color: var(--kc-card-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--kc-border);
+}
+.quick-actions h3 {
+    margin-top:0;
+    margin-bottom: 1rem;
+    color: var(--kc-text-secondary);
+}
+.quick-actions button {
+    background-color: var(--kc-primary);
+    color: var(--kc-text-primary);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    transition: opacity 0.2s;
+}
+.quick-actions button:hover {
+    opacity: 0.85;
+}
+
+
+.admin-footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: var(--kc-text-secondary);
+    border-top: 1px solid var(--kc-border);
+    background-color: var(--kc-surface);
+}
+
+/* Responsive adjustments could be added here */
+@media (max-width: 768px) {
+    .admin-main {
+        flex-direction: column;
+    }
+    .admin-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--kc-border);
+    }
+}
