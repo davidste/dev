@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Codes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --kc-primary: #3B82F6; /* blue-500 */
+      --kc-secondary: #F59E0B; /* amber-500 */
+      --kc-background: #0F0F0F;
+      --kc-surface: #1A1A1A;
+      --kc-surface-light: #252525;
+      --kc-card-background: #1F1F1F;
+      --kc-input-background: #2A2A2A;
+      --kc-text-primary: #FFFFFF;
+      --kc-text-secondary: #9CA3AF; /* gray-400 */
+      --kc-success: #10B981; /* emerald-500 */
+      --kc-error: #EF4444; /* red-500 */
+      --kc-warning: #F59E0B; /* amber-500, same as secondary */
+      --kc-info: #3B82F6; /* blue-500, same as primary */
+      --kc-border: #374151; /* gray-700 */
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--kc-background);
+      color: var(--kc-text-primary);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--kc-surface); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--kc-border); 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4b5563; /* gray-600 for hover, slightly lighter than border */
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@19.1.0/",
+    "lucide-react": "https://esm.sh/lucide-react@0.522.0",
+    "react/": "https://esm.sh/react@19.1.0/",
+    "react": "https://esm.sh/react@19.1.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@7.6.2",
+    "@google/genai": "https://esm.sh/@google/genai@1.6.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

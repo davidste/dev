@@ -1,0 +1,5 @@
+{
+  "name": "King Codes",
+  "description": "An automotive locksmith assistant for illustrative VIN lookups and key/pin code information. This application uses the Gemini API for generating informative content and is for demonstration purposes only. It does not provide real key codes or access restricted automotive data.",
+  "requestFramePermissions": ["camera"]
+}

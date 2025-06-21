@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Codes - Admin Panel</title>
+    <link rel="stylesheet" href="/admin-ui/style.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>King Codes Admin Panel</h1>
+            <nav>
+                <a href="#" id="logout-btn">Logout (Placeholder)</a>
+            </nav>
+        </header>
+        <div class="admin-main">
+            <aside class="admin-sidebar">
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="#" class="active-link">Dashboard</a></li>
+                    <li><a href="#">User Management</a></li>
+                    <li><a href="#">VIN Lookups</a></li>
+                    <li><a href="#">Providers</a></li>
+                    <li><a href="#">Pricing & Discounts</a></li>
+                    <li><a href="#">App Settings</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Support Tickets</a></li>
+                    <li><a href="#">Audit Logs</a></li>
+                </ul>
+            </aside>
+            <section class="admin-content">
+                <div class="content-header">
+                    <h2>Dashboard Overview</h2>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Users</h3>
+                        <p>1,234</p>
+                        <small>(All/Verified/Pending)</small>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Daily Revenue</h3>
+                        <p>$567.89</p>
+                        <small>Charts Placeholder</small>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active VIN Lookups (24h)</h3>
+                        <p>78</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pending Verifications</h3>
+                        <p>12</p>
+                    </div>
+                     <div class="stat-card">
+                        <h3>System Health</h3>
+                        <p class="text-success">Nominal</p>
+                    </div>
+                     <div class="stat-card">
+                        <h3>Provider Performance</h3>
+                        <p>Metrics Placeholder</p>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <button>Verify User</button>
+                    <button>Create Announcement</button>
+                    <button>View Audit Log</button>
+                </div>
+            </section>
+        </div>
+        <footer class="admin-footer">
+            <p>&copy; 2024 King Codes. Admin Panel.</p>
+        </footer>
+    </div>
+    <script>
+        // Basic placeholder for logout - in real app, would call API and redirect
+        document.getElementById('logout-btn')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Logout functionality to be implemented. This would typically clear session/token and redirect to login.');
+            // Example: fetch('/api/auth/logout', { method: 'POST' }).then(() => window.location.href = '/login');
+        });
+    </script>
+</body>
+</html>
